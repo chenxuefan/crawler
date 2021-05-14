@@ -1,0 +1,526 @@
+1590455908667	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\billie\\AppData\\Local\\Temp\\rust_mozprofilegAfs8P"
+1590455908997	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension 'doh-rollout@mozilla.org': Reading manifest: Invalid extension permission: networkStatus
+1590455909305	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1590455909305	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1590455909306	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1590455909306	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1590455910658	Marionette	INFO	Listening on port 59480
+1590455910788	Marionette	WARN	TLS certificate errors will be ignored for this session
+1590456777454	Marionette	INFO	Stopped listening on port 59480
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1591238296109	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\billie\\AppData\\Local\\Temp\\rust_mozprofilePZ2Xhe"
+1591238296685	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension 'doh-rollout@mozilla.org': Reading manifest: Invalid extension permission: networkStatus
+1591238297057	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1591238297057	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1591238297057	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1591238297057	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1591238299194	Marionette	INFO	Listening on port 63601
+1591238299335	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/modules/NetworkGeolocationProvider.jsm, line 555: TypeError: xhr.response.location is undefined
+1591238324012	Marionette	INFO	Stopped listening on port 63601
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1592121276181	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\billie\\AppData\\Local\\Temp\\rust_mozprofilew7iFr4"
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1592121278479	Marionette	INFO	Listening on port 54675
+1592121278910	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource:///actors/AboutReaderChild.jsm, line 95: NS_ERROR_UNEXPECTED: 
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x380132,name=PContent::Msg_CommitBrowsingContextTransaction) Closed channel: cannot send/recv
+
+1592799866350	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/_9/hfqs3d0x55ngrmn7brs0j1_h0000gn/T/rust_mozprofile8R5uTJ"
+1592799871488	Marionette	INFO	Listening on port 58657
+1592799871544	Marionette	WARN	TLS certificate errors will be ignored for this session
+1592800023345	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/_9/hfqs3d0x55ngrmn7brs0j1_h0000gn/T/rust_mozprofileKGehfH"
+1592800025640	Marionette	INFO	Listening on port 58879
+1592800025701	Marionette	WARN	TLS certificate errors will be ignored for this session
+1592800121554	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/_9/hfqs3d0x55ngrmn7brs0j1_h0000gn/T/rust_mozprofilePxYWl0"
+1592800123909	Marionette	INFO	Listening on port 58935
+1592800124009	Marionette	WARN	TLS certificate errors will be ignored for this session
+1592800360266	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/_9/hfqs3d0x55ngrmn7brs0j1_h0000gn/T/rust_mozprofileJzzyW6"
+1592800362531	Marionette	INFO	Listening on port 58998
+1592800362621	Marionette	WARN	TLS certificate errors will be ignored for this session
+1592800366809	Marionette	INFO	Stopped listening on port 58657
+1592800369921	Marionette	INFO	Stopped listening on port 58879
+1592800372356	Marionette	INFO	Stopped listening on port 58935
+1592800390076	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/_9/hfqs3d0x55ngrmn7brs0j1_h0000gn/T/rust_mozprofileXLyMy0"
+1592800391993	Marionette	INFO	Listening on port 59056
+1592800392028	Marionette	WARN	TLS certificate errors will be ignored for this session
+1592800985840	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/_9/hfqs3d0x55ngrmn7brs0j1_h0000gn/T/rust_mozprofileiM0A6y"
+1592800988058	Marionette	INFO	Listening on port 59247
+1592800988092	Marionette	WARN	TLS certificate errors will be ignored for this session
+1592801036995	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/_9/hfqs3d0x55ngrmn7brs0j1_h0000gn/T/rust_mozprofilewAP52K"
+1592801039285	Marionette	INFO	Listening on port 59321
+1592801039361	Marionette	WARN	TLS certificate errors will be ignored for this session
+1592801058164	Marionette	INFO	Stopped listening on port 58998
+1592801061668	Marionette	INFO	Stopped listening on port 59056
+1592801067791	Marionette	INFO	Stopped listening on port 59247
+1592801072391	Marionette	INFO	Stopped listening on port 59321
+1592801098282	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/_9/hfqs3d0x55ngrmn7brs0j1_h0000gn/T/rust_mozprofilejhorII"
+1592801100725	Marionette	INFO	Listening on port 59394
+1592801100748	Marionette	WARN	TLS certificate errors will be ignored for this session
+1592801235256	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/_9/hfqs3d0x55ngrmn7brs0j1_h0000gn/T/rust_mozprofileNkgCGP"
+1592801237970	Marionette	INFO	Listening on port 59509
+1592801238031	Marionette	WARN	TLS certificate errors will be ignored for this session
+1592801500375	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "--headless" "--disable-gpu" "-foreground" "-no-remote" "-profile" "/var/folders/_9/hfqs3d0x55ngrmn7brs0j1_h0000gn/T/rust_mozprofileSozQuR"
+*** You are running in headless mode.
+1592801502449	Marionette	INFO	Listening on port 59623
+1592801502549	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://www.nhc.gov.cn/xcs/yqtb/list_gzbd.shtml line 5 > eval, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://www.nhc.gov.cn/xcs/yqtb/list_gzbd.shtml line 5 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://www.nhc.gov.cn/xcs/yqtb/list_gzbd.shtml line 5 > eval, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://www.nhc.gov.cn/xcs/yqtb/list_gzbd.shtml line 5 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+1592801873976	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "--headless" "--disable-gpu" "-foreground" "-no-remote" "-profile" "/var/folders/_9/hfqs3d0x55ngrmn7brs0j1_h0000gn/T/rust_mozprofileskfm3g"
+*** You are running in headless mode.
+1592801876111	Marionette	INFO	Listening on port 59727
+1592801876138	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://www.nhc.gov.cn/xcs/yqtb/list_gzbd.shtml line 5 > eval, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://www.nhc.gov.cn/xcs/yqtb/list_gzbd.shtml line 5 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://www.nhc.gov.cn/xcs/yqtb/list_gzbd.shtml line 5 > eval, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://www.nhc.gov.cn/xcs/yqtb/list_gzbd.shtml line 5 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript error: resource://gre/modules/NetworkGeolocationProvider.jsm, line 555: TypeError: xhr.response.location is undefined
+1592801919014	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "--headless" "--disable-gpu" "-foreground" "-no-remote" "-profile" "/var/folders/_9/hfqs3d0x55ngrmn7brs0j1_h0000gn/T/rust_mozprofile2sljOj"
+*** You are running in headless mode.
+1592801921344	Marionette	INFO	Listening on port 59794
+1592801921388	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://www.nhc.gov.cn/xcs/yqtb/list_gzbd.shtml line 5 > eval, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://www.nhc.gov.cn/xcs/yqtb/list_gzbd.shtml line 5 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://www.nhc.gov.cn/xcs/yqtb/list_gzbd.shtml line 5 > eval, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://www.nhc.gov.cn/xcs/yqtb/list_gzbd.shtml line 5 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+1592801982704	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "--headless" "--disable-gpu" "-foreground" "-no-remote" "-profile" "/var/folders/_9/hfqs3d0x55ngrmn7brs0j1_h0000gn/T/rust_mozprofile5uTns1"
+*** You are running in headless mode.
+1592801984793	Marionette	INFO	Listening on port 59867
+1592801984839	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://www.nhc.gov.cn/xcs/yqtb/list_gzbd.shtml line 5 > eval, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://www.nhc.gov.cn/xcs/yqtb/list_gzbd.shtml line 5 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://www.nhc.gov.cn/xcs/yqtb/list_gzbd.shtml line 5 > eval, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://www.nhc.gov.cn/xcs/yqtb/list_gzbd.shtml line 5 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+1592811017951	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "--headless" "--disable-gpu" "-foreground" "-no-remote" "-profile" "/var/folders/_9/hfqs3d0x55ngrmn7brs0j1_h0000gn/T/rust_mozprofile7jWgZo"
+*** You are running in headless mode.
+1592811020834	Marionette	INFO	Listening on port 49755
+1592811020906	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://www.nhc.gov.cn/xcs/yqtb/list_gzbd.shtml line 5 > eval, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://www.nhc.gov.cn/xcs/yqtb/list_gzbd.shtml line 5 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://www.nhc.gov.cn/xcs/yqtb/list_gzbd.shtml line 5 > eval, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://www.nhc.gov.cn/xcs/yqtb/list_gzbd.shtml line 5 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1592811215337	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "--headless" "--disable-gpu" "-foreground" "-no-remote" "-profile" "/var/folders/_9/hfqs3d0x55ngrmn7brs0j1_h0000gn/T/rust_mozprofilefjeX6n"
+*** You are running in headless mode.
+1592811218080	Marionette	INFO	Listening on port 49394
+1592811218108	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://www.nhc.gov.cn/xcs/yqtb/list_gzbd.shtml line 5 > eval, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://www.nhc.gov.cn/xcs/yqtb/list_gzbd.shtml line 5 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://www.nhc.gov.cn/xcs/yqtb/list_gzbd.shtml line 5 > eval, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://www.nhc.gov.cn/xcs/yqtb/list_gzbd.shtml line 5 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+1592811355108	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "--headless" "--disable-gpu" "-foreground" "-no-remote" "-profile" "/var/folders/_9/hfqs3d0x55ngrmn7brs0j1_h0000gn/T/rust_mozprofileT7w7C9"
+*** You are running in headless mode.
+1592811356785	Marionette	INFO	Listening on port 49499
+1592811356849	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://www.nhc.gov.cn/xcs/yqtb/list_gzbd.shtml line 5 > eval, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://www.nhc.gov.cn/xcs/yqtb/list_gzbd.shtml line 5 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://www.nhc.gov.cn/xcs/yqtb/list_gzbd.shtml line 5 > eval, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://www.nhc.gov.cn/xcs/yqtb/list_gzbd.shtml line 5 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+1592811715220	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/_9/hfqs3d0x55ngrmn7brs0j1_h0000gn/T/rust_mozprofilemlkzeB"
+1592811717251	Marionette	INFO	Listening on port 49643
+1592811717270	Marionette	WARN	TLS certificate errors will be ignored for this session
+1592811791261	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/_9/hfqs3d0x55ngrmn7brs0j1_h0000gn/T/rust_mozprofilePCGTDa"
+1592811793325	Marionette	INFO	Listening on port 49725
+1592811793412	Marionette	WARN	TLS certificate errors will be ignored for this session
+1592811851675	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/_9/hfqs3d0x55ngrmn7brs0j1_h0000gn/T/rust_mozprofileGK665d"
+1592811853763	Marionette	INFO	Listening on port 49789
+1592811853827	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/modules/NetworkGeolocationProvider.jsm, line 555: TypeError: xhr.response.location is undefined
+1592811920860	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/_9/hfqs3d0x55ngrmn7brs0j1_h0000gn/T/rust_mozprofileNumdt2"
+1592811923212	Marionette	INFO	Listening on port 49958
+1592811923223	Marionette	WARN	TLS certificate errors will be ignored for this session
+1592812588426	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/_9/hfqs3d0x55ngrmn7brs0j1_h0000gn/T/rust_mozprofilepsI6HC"
+1592812590646	Marionette	INFO	Listening on port 50286
+1592812590692	Marionette	WARN	TLS certificate errors will be ignored for this session
+1592812605288	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "--headless" "--disable-gpu" "-foreground" "-no-remote" "-profile" "/var/folders/_9/hfqs3d0x55ngrmn7brs0j1_h0000gn/T/rust_mozprofileJixOci"
+*** You are running in headless mode.
+1592812607734	Marionette	INFO	Listening on port 50345
+1592812607769	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://www.nhc.gov.cn/xcs/yqtb/list_gzbd.shtml line 5 > eval, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://www.nhc.gov.cn/xcs/yqtb/list_gzbd.shtml line 5 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://www.nhc.gov.cn/xcs/yqtb/list_gzbd.shtml line 5 > eval, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://www.nhc.gov.cn/xcs/yqtb/list_gzbd.shtml line 5 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+1592812990244	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "--headless" "--disable-gpu" "-foreground" "-no-remote" "-profile" "/var/folders/_9/hfqs3d0x55ngrmn7brs0j1_h0000gn/T/rust_mozprofileNUYi7v"
+*** You are running in headless mode.
+1592812992285	Marionette	INFO	Listening on port 50494
+1592812992314	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://www.nhc.gov.cn/xcs/yqtb/list_gzbd.shtml line 5 > eval, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://www.nhc.gov.cn/xcs/yqtb/list_gzbd.shtml line 5 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://www.nhc.gov.cn/xcs/yqtb/list_gzbd.shtml line 5 > eval, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://www.nhc.gov.cn/xcs/yqtb/list_gzbd.shtml line 5 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript error: resource://gre/modules/NetworkGeolocationProvider.jsm, line 555: TypeError: xhr.response.location is undefined
+1592814968733	Marionette	INFO	Stopped listening on port 49725
+1592814970658	Marionette	INFO	Stopped listening on port 49789
+1592814973366	Marionette	INFO	Stopped listening on port 49958
+1592814975953	Marionette	INFO	Stopped listening on port 50286
+1592815726222	Marionette	INFO	Stopped listening on port 49643
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1593393408631	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "--headless" "--disable-gpu" "-foreground" "-no-remote" "-profile" "/var/folders/_9/hfqs3d0x55ngrmn7brs0j1_h0000gn/T/rust_mozprofilelGKCF3"
+*** You are running in headless mode.
+1593393411565	Marionette	INFO	Listening on port 52857
+1593393411590	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://www.nhc.gov.cn/xcs/yqtb/list_gzbd.shtml line 5 > eval, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://www.nhc.gov.cn/xcs/yqtb/list_gzbd.shtml line 5 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://www.nhc.gov.cn/xcs/yqtb/list_gzbd.shtml line 5 > eval, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://www.nhc.gov.cn/xcs/yqtb/list_gzbd.shtml line 5 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+1594712972307	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "--headless" "--disable-gpu" "-foreground" "-no-remote" "-profile" "/var/folders/_9/hfqs3d0x55ngrmn7brs0j1_h0000gn/T/rust_mozprofiledDwuEg"
+*** You are running in headless mode.
+1594712974569	Marionette	INFO	Listening on port 51277
+1594712974648	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://www.nhc.gov.cn/xcs/yqtb/list_gzbd.shtml line 5 > eval, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://www.nhc.gov.cn/xcs/yqtb/list_gzbd.shtml line 5 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://www.nhc.gov.cn/xcs/yqtb/list_gzbd.shtml line 5 > eval, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://www.nhc.gov.cn/xcs/yqtb/list_gzbd.shtml line 5 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+1594713994389	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "--headless" "--disable-gpu" "-foreground" "-no-remote" "-profile" "/var/folders/_9/hfqs3d0x55ngrmn7brs0j1_h0000gn/T/rust_mozprofileI4y06E"
+*** You are running in headless mode.
+1594713997085	Marionette	INFO	Listening on port 51651
+1594713997184	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://www.nhc.gov.cn/xcs/yqtb/list_gzbd.shtml line 5 > eval, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://www.nhc.gov.cn/xcs/yqtb/list_gzbd.shtml line 5 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://www.nhc.gov.cn/xcs/yqtb/list_gzbd.shtml line 5 > eval, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://www.nhc.gov.cn/xcs/yqtb/list_gzbd.shtml line 5 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+1603524442703	geckodriver	INFO	Listening on 127.0.0.1:64316
+1603524443719	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--headless" "--disable-gpu" "-foreground" "-no-remote" "-profile" "/var/folders/_9/hfqs3d0x55ngrmn7brs0j1_h0000gn/T/rust_mozprofileYAvpXt"
+*** You are running in headless mode.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1603524446261	Marionette	INFO	Listening on port 64328
+1603524446272	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://www.nhc.gov.cn/xcs/yqtb/list_gzbd.shtml line 5 > eval, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://www.nhc.gov.cn/xcs/yqtb/list_gzbd.shtml line 5 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://www.nhc.gov.cn/xcs/yqtb/list_gzbd.shtml line 5 > eval, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://www.nhc.gov.cn/xcs/yqtb/list_gzbd.shtml line 5 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+console.error: services.settings: 
+  main/partitioning-exempt-urls Signature failed  TypeError: NetworkError when attempting to fetch resource.
+console.error: services.settings: 
+  main/fxmonitor-breaches Signature failed  TypeError: NetworkError when attempting to fetch resource.
+console.error: services.settings: 
+  main/messaging-experiments Signature failed  TypeError: NetworkError when attempting to fetch resource.
+console.error: services.settings: 
+  main/message-groups Signature failed  TypeError: NetworkError when attempting to fetch resource.
+1603524795509	geckodriver	INFO	Listening on 127.0.0.1:64745
+1603524796527	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/_9/hfqs3d0x55ngrmn7brs0j1_h0000gn/T/rust_mozprofile0gqzvH"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1603524799164	Marionette	INFO	Listening on port 64758
+1603524799198	Marionette	WARN	TLS certificate errors will be ignored for this session
+1603525174774	geckodriver	INFO	Listening on 127.0.0.1:65193
+1603525175786	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/_9/hfqs3d0x55ngrmn7brs0j1_h0000gn/T/rust_mozprofile4mYbMw"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1603525178280	Marionette	INFO	Listening on port 65204
+1603525178346	Marionette	WARN	TLS certificate errors will be ignored for this session
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+1603525201338	geckodriver	INFO	Listening on 127.0.0.1:65287
+1603525202352	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/_9/hfqs3d0x55ngrmn7brs0j1_h0000gn/T/rust_mozprofilel906pk"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1603525204647	Marionette	INFO	Listening on port 65298
+1603525204706	Marionette	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+console.error: services.settings: 
+  main/cfr Signature failed  TypeError: NetworkError when attempting to fetch resource.
+console.error: services.settings: 
+  main/messaging-experiments Signature failed  TypeError: NetworkError when attempting to fetch resource.
+console.error: services.settings: 
+  security-state/intermediates Signature failed  TypeError: NetworkError when attempting to fetch resource.
+console.error: services.settings: 
+  Message: TypeError: NetworkError when attempting to fetch resource.
+1603525604302	geckodriver	INFO	Listening on 127.0.0.1:49198
+1603525605314	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/_9/hfqs3d0x55ngrmn7brs0j1_h0000gn/T/rust_mozprofile3J0cx8"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1603525607732	Marionette	INFO	Listening on port 49210
+1603525607786	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.error: services.settings: 
+  Message: TypeError: NetworkError when attempting to fetch resource.
+1603525830979	geckodriver	INFO	Listening on 127.0.0.1:49494
+1603525832006	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/_9/hfqs3d0x55ngrmn7brs0j1_h0000gn/T/rust_mozprofilec262EA"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1603525834536	Marionette	INFO	Listening on port 49506
+1603525834582	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.error: services.settings: 
+  Message: TypeError: NetworkError when attempting to fetch resource.
+console.error: services.settings: 
+  Message: TypeError: NetworkError when attempting to fetch resource.
+1603526256027	addons.xpi	ERROR	System addon update list error Error: Failed downloading XML, status: 0, reason: timeout
+console.error: services.settings: 
+  Message: TypeError: NetworkError when attempting to fetch resource.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+console.error: services.settings: 
+  Message: TypeError: NetworkError when attempting to fetch resource.
+console.error: services.settings: 
+  main/whats-new-panel Signature failed  TypeError: NetworkError when attempting to fetch resource.
+console.error: services.settings: 
+  Message: TypeError: NetworkError when attempting to fetch resource.
+console.error: services.settings: 
+  Message: TypeError: NetworkError when attempting to fetch resource.
+console.error: services.settings: 
+  main/fxmonitor-breaches Signature failed  TypeError: NetworkError when attempting to fetch resource.
+console.error: services.settings: 
+  Message: TypeError: NetworkError when attempting to fetch resource.
+console.error: services.settings: 
+  main/pioneer-study-addons-v1 Signature failed  TypeError: NetworkError when attempting to fetch resource.
+console.error: services.settings: 
+  Message: TypeError: NetworkError when attempting to fetch resource.
+1603527344319	geckodriver	INFO	Listening on 127.0.0.1:51537
+1603527345343	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--headless" "--disable-gpu" "-foreground" "-no-remote" "-profile" "/var/folders/_9/hfqs3d0x55ngrmn7brs0j1_h0000gn/T/rust_mozprofileJYPE3B"
+*** You are running in headless mode.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1603527349936	Marionette	INFO	Listening on port 51548
+1603527349998	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.error: Region.jsm: "Error fetching region" (new AbortError("The operation was aborted. ", (void 0), 697))
+console.error: Region.jsm: "Failed to fetch region" (new Error("NO_RESULT", "resource://gre/modules/Region.jsm", 351))
+JavaScript warning: http://www.nhc.gov.cn/xcs/yqtb/list_gzbd.shtml line 5 > eval, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://www.nhc.gov.cn/xcs/yqtb/list_gzbd.shtml line 5 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://www.nhc.gov.cn/xcs/yqtb/list_gzbd.shtml line 5 > eval, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://www.nhc.gov.cn/xcs/yqtb/list_gzbd.shtml line 5 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+console.error: services.settings: 
+  main/message-groups Signature failed  TypeError: NetworkError when attempting to fetch resource.
+console.error: services.settings: 
+  Message: TypeError: NetworkError when attempting to fetch resource.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+1603527436369	geckodriver	INFO	Listening on 127.0.0.1:51800
+1603527437382	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--headless" "--disable-gpu" "-foreground" "-no-remote" "-profile" "/var/folders/_9/hfqs3d0x55ngrmn7brs0j1_h0000gn/T/rust_mozprofiledw3w0d"
+*** You are running in headless mode.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1603527439354	Marionette	INFO	Listening on port 51812
+1603527439437	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://www.nhc.gov.cn/xcs/yqtb/list_gzbd.shtml line 5 > eval, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://www.nhc.gov.cn/xcs/yqtb/list_gzbd.shtml line 5 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://www.nhc.gov.cn/xcs/yqtb/list_gzbd.shtml line 5 > eval, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://www.nhc.gov.cn/xcs/yqtb/list_gzbd.shtml line 5 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+console.error: services.settings: 
+  main/url-classifier-skip-urls Signature failed  TypeError: NetworkError when attempting to fetch resource.
+console.error: services.settings: 
+  Message: TypeError: NetworkError when attempting to fetch resource.
+console.error: services.settings: 
+  main/messaging-experiments Signature failed  TypeError: NetworkError when attempting to fetch resource.
+console.error: services.settings: 
+  main/partitioning-exempt-urls Signature failed  TypeError: NetworkError when attempting to fetch resource.
+console.error: services.settings: 
+  main/fxmonitor-breaches Signature failed  TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=445423, line 1: NS_ERROR_NOT_INITIALIZED: 
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+console.error: services.settings: 
+  Message: TypeError: NetworkError when attempting to fetch resource.
+console.error: services.settings: 
+  Message: TypeError: NetworkError when attempting to fetch resource.
+console.error: services.settings: 
+  main/public-suffix-list Signature failed  TypeError: NetworkError when attempting to fetch resource.
+console.error: services.settings: 
+  Message: TypeError: NetworkError when attempting to fetch resource.
+console.error: services.settings: 
+  Message: TypeError: NetworkError when attempting to fetch resource.
+console.error: services.settings: 
+  Message: TypeError: NetworkError when attempting to fetch resource.
+console.error: services.settings: 
+  Message: TypeError: NetworkError when attempting to fetch resource.
+console.error: services.settings: 
+  Message: TypeError: NetworkError when attempting to fetch resource.
+console.error: services.settings: 
+  pinning/pins Signature failed  TypeError: NetworkError when attempting to fetch resource.
+console.error: services.settings: 
+  Message: TypeError: NetworkError when attempting to fetch resource.
+1603688337778	Marionette	INFO	Stopped listening on port 49210
+1603688339332	Marionette	INFO	Stopped listening on port 64758
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1604481002736	geckodriver	INFO	Listening on 127.0.0.1:65437
+1604492918028	geckodriver	INFO	Listening on 127.0.0.1:53014
+1604492918056	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--headless" "--disable-gpu" "-foreground" "-no-remote" "-profile" "/var/folders/pd/_b5tswv53n3bmz4w_dwn680c0000gn/T/rust_mozprofilewFX4f9"
+*** You are running in headless mode.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1604492925342	Marionette	INFO	Listening on port 53021
+1604492925423	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.error: Region.jsm: "Error fetching region" (new AbortError("The operation was aborted. ", (void 0), 697))
+console.error: Region.jsm: "Failed to fetch region" (new Error("NO_RESULT", "resource://gre/modules/Region.jsm", 351))
+JavaScript warning: http://www.nhc.gov.cn/xcs/yqtb/list_gzbd.shtml line 5 > eval, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://www.nhc.gov.cn/xcs/yqtb/list_gzbd.shtml line 5 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://www.nhc.gov.cn/xcs/yqtb/list_gzbd.shtml line 5 > eval, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://www.nhc.gov.cn/xcs/yqtb/list_gzbd.shtml line 5 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+console.error: services.settings: 
+  Message: TypeError: NetworkError when attempting to fetch resource.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1604494114227	geckodriver	INFO	Listening on 127.0.0.1:49730
+1604494115255	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--headless" "--disable-gpu" "-foreground" "-no-remote" "-profile" "/var/folders/pd/_b5tswv53n3bmz4w_dwn680c0000gn/T/rust_mozprofileZehBYw"
+*** You are running in headless mode.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1604494120794	Marionette	INFO	Listening on port 49744
+1604494120846	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.error: Region.jsm: "Error fetching region" (new AbortError("The operation was aborted. ", (void 0), 697))
+console.error: Region.jsm: "Failed to fetch region" (new Error("NO_RESULT", "resource://gre/modules/Region.jsm", 351))
+JavaScript warning: http://www.nhc.gov.cn/xcs/yqtb/list_gzbd.shtml line 5 > eval, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://www.nhc.gov.cn/xcs/yqtb/list_gzbd.shtml line 5 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://www.nhc.gov.cn/xcs/yqtb/list_gzbd.shtml line 5 > eval, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://www.nhc.gov.cn/xcs/yqtb/list_gzbd.shtml line 5 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1604816980738	geckodriver	INFO	Listening on 127.0.0.1:49590
+1604816980769	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--headless" "--disable-gpu" "-foreground" "-no-remote" "-profile" "/var/folders/pd/_b5tswv53n3bmz4w_dwn680c0000gn/T/rust_mozprofilec0MARM"
+*** You are running in headless mode.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1604816984547	Marionette	INFO	Listening on port 49600
+1604816984644	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.error: Region.jsm: "Error fetching region" (new AbortError("The operation was aborted. ", (void 0), 697))
+console.error: Region.jsm: "Failed to fetch region" (new Error("NO_RESULT", "resource://gre/modules/Region.jsm", 351))
+JavaScript warning: http://www.nhc.gov.cn/xcs/yqtb/list_gzbd.shtml line 5 > eval, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://www.nhc.gov.cn/xcs/yqtb/list_gzbd.shtml line 5 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://www.nhc.gov.cn/xcs/yqtb/list_gzbd.shtml line 5 > eval, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://www.nhc.gov.cn/xcs/yqtb/list_gzbd.shtml line 5 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript error: http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=445781, line 1: NS_ERROR_NOT_INITIALIZED: 
+JavaScript error: http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=445781, line 1: NS_ERROR_NOT_INITIALIZED: 
+JavaScript error: http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=445781, line 1: NS_ERROR_NOT_INITIALIZED: 
+1606285084175	geckodriver	INFO	Listening on 127.0.0.1:49456
+1606285084203	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--headless" "--disable-gpu" "-foreground" "-no-remote" "-profile" "/var/folders/pd/_b5tswv53n3bmz4w_dwn680c0000gn/T/rust_mozprofileUJ2TiV"
+*** You are running in headless mode.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1606285086738	Marionette	INFO	Listening on port 49466
+1606285086791	Marionette	WARN	TLS certificate errors will be ignored for this session
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1606285118440	geckodriver	INFO	Listening on 127.0.0.1:49525
+1606285118453	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--headless" "--disable-gpu" "-foreground" "-no-remote" "-profile" "/var/folders/pd/_b5tswv53n3bmz4w_dwn680c0000gn/T/rust_mozprofilewP30rt"
+*** You are running in headless mode.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1606285120156	Marionette	INFO	Listening on port 49534
+1606285120207	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://www.nhc.gov.cn/xcs/yqtb/list_gzbd.shtml line 5 > eval, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://www.nhc.gov.cn/xcs/yqtb/list_gzbd.shtml line 5 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://www.nhc.gov.cn/xcs/yqtb/list_gzbd.shtml line 5 > eval, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://www.nhc.gov.cn/xcs/yqtb/list_gzbd.shtml line 5 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1606628210672	geckodriver	INFO	Listening on 127.0.0.1:51519
+1606628211698	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/pd/_b5tswv53n3bmz4w_dwn680c0000gn/T/rust_mozprofileJc0xD8"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1606628214381	Marionette	INFO	Listening on port 51534
+1606628214454	Marionette	WARN	TLS certificate errors will be ignored for this session
+1606630486620	geckodriver	INFO	Listening on 127.0.0.1:52248
+1606630487647	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/pd/_b5tswv53n3bmz4w_dwn680c0000gn/T/rust_mozprofile5GEJnV"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1606630490619	Marionette	INFO	Listening on port 52264
+1606630490658	Marionette	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1608924388335	geckodriver	INFO	Listening on 127.0.0.1:59062
+1608924388361	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/pd/_b5tswv53n3bmz4w_dwn680c0000gn/T/rust_mozprofilejYSrs3"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1608924391819	Marionette	INFO	Listening on port 59068
+1608924391862	Marionette	WARN	TLS certificate errors will be ignored for this session
+1614154327502	geckodriver	INFO	Listening on 127.0.0.1:52212
+1614154328532	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/pd/_b5tswv53n3bmz4w_dwn680c0000gn/T/rust_mozprofileTf9dRV"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1614154331958	Marionette	INFO	Listening on port 52228
+1614154332017	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=448375, line 1: NS_ERROR_NOT_INITIALIZED: 
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+1614246777825	Marionette	INFO	Stopped listening on port 52228
