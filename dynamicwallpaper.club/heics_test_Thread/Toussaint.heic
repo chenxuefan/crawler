@@ -1,7 +1,0 @@
-{
-  "error": {
-    "code": 404,
-    "message": "Not Found.  Could not get object",
-    "status": "GET_OBJECT"
-  }
-}
