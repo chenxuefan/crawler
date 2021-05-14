@@ -1,0 +1,16 @@
+alabaster==0.7.12
+antlr4-python3-runtime==4.8
+beautifulsoup4==4.9.3
+bs4==0.0.1
+certifi==2020.12.5
+chardet==4.0.0
+et-xmlfile==1.1.0
+idna==2.10
+lxml==4.6.3
+openpyxl==3.0.7
+progressbar==2.5
+psutil==5.8.0
+requests==2.25.1
+schedule==1.1.0
+soupsieve==2.2.1
+urllib3==1.26.4
