@@ -131,6 +131,7 @@ class Spider:
     def main(self):
         while self.page < self.page_count:
             self.spider()
+        logging.info(f'爬取成功，一共{len(Config.characters)}个角色')
 
 
 @log
@@ -151,13 +152,13 @@ def xl_write():
         ws.append([c['charactor'],c['en_charactor'],c['actor'],c['season'],c['story']])
 
     wb.save(Config.Excel_path)
+    logging.info('已经写入表格！')
 
 
 if __name__ == '__main__':
     print(Spider())
     Spider().main()
-    logging.info(f'爬取成功，一共{len(Config.characters)}个角色')
+
     logging.info(Config.characters)
     for c in Config.characters: logging.info(c)
     xl_write()
-    logging.info('已经写入表格！')

@@ -71,6 +71,12 @@ if __name__ == '__main__':
             try:download(path='./Intouchables (La Bande Originale du Film)',name=titles[i],type='mp3',href=nmhref)
             except:pass
 
+from bs4 import BeautifulSoup
+import requests
+
+soup = BeautifulSoup(requests.get('https://www.dytt8.net/').text)
+soup .select()
+
 
 
 
