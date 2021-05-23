@@ -17,7 +17,7 @@ from functools import wraps
 class Config:
     TYPE = {
         'Wallpapers':'https://unsplash.com/t/wallpapers',
-        'Nature_url':'https://unsplash.com/t/nature',
+        'Nature':'https://unsplash.com/t/nature',
         'People':'https://unsplash.com/t/people',
         'Architecture':'https://unsplash.com/t/architecture',
         'Current Events':'https://unsplash.com/t/current-events',
