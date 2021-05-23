@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>wallpapers-unsplash</title>
+</head>
+<body>
+<div id="unsplash">
+	<p v-for="item in type_url" >
+		<img :src="item.url" >
+		/<em v-text="item.type"></em>/
+	</p>
+</div>
+</body>
+</html>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script type="text/javascript">
+    var vm = new Vue({
+        el:"#unsplash",
+        data:{
+            type_url:[
+				{type:'Wallpapers',url:'https://download.billie52707.cn/unsplash/images/Wallpapers/main.jpg'},
+				{type:'Animals',url:'https://download.billie52707.cn/unsplash/images/Animals/main.jpg'},
+				{type:'Arts & Culture',url:'https://download.billie52707.cn/unsplash/images/Arts & Culture/main.jpg'},
+				{type:'Athletics',url:'https://download.billie52707.cn/unsplash/images/Athletics/main.jpg'},
+				{type:'Business & Work',url:'https://download.billie52707.cn/unsplash/images/Business & Work/main.jpg'},
+				{type:'Experimental',url:'https://download.billie52707.cn/unsplash/images/Experimental/main.jpg'},
+				{type:'Film',url:'https://download.billie52707.cn/unsplash/images/Film/main.jpg'},
+				{type:'Health & Wellness',url:'https://download.billie52707.cn/unsplash/images/Health & Wellness/main.jpg'},
+				{type:'Interiors',url:'https://download.billie52707.cn/unsplash/images/Interiors/main.jpg'},
+				{type:'People',url:'https://download.billie52707.cn/unsplash/images/People/main.jpg'},
+				{type:'Street Photography',url:'https://download.billie52707.cn/unsplash/images/Street Photography/main.jpg'},
+				{type:'Textures & Patterns',url:'https://download.billie52707.cn/unsplash/images/Textures & Patterns/main.jpg'},
+				{type:'Architecture',url:'https://download.billie52707.cn/unsplash/images/Architecture/main.jpg'},
+				{type:'Current Events',url:'https://download.billie52707.cn/unsplash/images/Current Events/main.jpg'},
+				{type:'Fashion',url:'https://download.billie52707.cn/unsplash/images/Fashion/main.jpg'},
+				{type:'Food & Drink',url:'https://download.billie52707.cn/unsplash/images/Food & Drink/main.jpg'},
+				{type:'History',url:'https://download.billie52707.cn/unsplash/images/History/main.jpg'},
+				{type:'Nature',url:'https://download.billie52707.cn/unsplash/images/Nature/main.jpg'},
+				{type:'Spirituality',url:'https://download.billie52707.cn/unsplash/images/Spirituality/main.jpg'},
+				{type:'Technology',url:'https://download.billie52707.cn/unsplash/images/Technology/main.jpg'},
+				{type:'Travel',url:'https://download.billie52707.cn/unsplash/images/Travel/main.jpg'}
+			],
+            types:[
+				
+				,
+                
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+			]
+        },
+    })
+</script>
