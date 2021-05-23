@@ -5,9 +5,13 @@
 @Describe
     - 爬取unsplash.com网站图片
 """
-import requests,re,random,traceback
+import requests
+import re
+import random
+import traceback
 import logging,os
-import schedule, time
+import schedule
+import time
 from functools import wraps
 
 class Config:
@@ -56,14 +60,15 @@ def log(func):
     return wrapper
 
 
+#----------------------------------------------------------------------------
 @log
-def spider(type):
+def spider(type:str) -> str:
     url = Config.TYPE[type]
     r = requests.get(url,headers={'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36'})
     return r.text
 
 @log
-def parse(text):
+def parse(text:str) -> str:
     ids = re.findall('<a itemProp="contentUrl"(.*?)href="(.*?)">', text)
     ids = [i[-1].split('/')[-1] for i in ids]
     id = random.choice(ids)
@@ -71,7 +76,7 @@ def parse(text):
     return url
 
 @log
-def download(type,url):
+def download(type:str,url:str):
     r = requests.get(url)
     filename = re.search('filename="(.*?)"',r.headers['Content-Disposition']).group(1)
     content = r.content
