@@ -13,31 +13,12 @@ import logging,os
 import schedule
 import time
 from functools import wraps
+from lxml import etree
+import urllib.parse
 
 class Config:
-    TYPE = {
-        'Wallpapers':'https://unsplash.com/t/wallpapers',
-        'Nature':'https://unsplash.com/t/nature',
-        'People':'https://unsplash.com/t/people',
-        'Architecture':'https://unsplash.com/t/architecture',
-        'Current Events':'https://unsplash.com/t/current-events',
-        'Business & Work':'https://unsplash.com/t/business-work',
-        'Experimental':'https://unsplash.com/t/experimental',
-        'Fashion':'https://unsplash.com/t/fashion',
-        'Film':'https://unsplash.com/t/film',
-        'Health & Wellness':'https://unsplash.com/t/health',
-        'Interiors':'https://unsplash.com/t/interiors',
-        'Street Photography':'https://unsplash.com/t/street-photography',
-        'Technology':'https://unsplash.com/t/technology',
-        'Travel':'https://unsplash.com/t/travel',
-        'Textures & Patterns':'https://unsplash.com/t/textures-patterns',
-        'Animals':'https://unsplash.com/t/animals',
-        'Food & Drink':'https://unsplash.com/t/food-drink',
-        'Athletics':'https://unsplash.com/t/athletics',
-        'Spirituality':'https://unsplash.com/t/spirituality',
-        'Arts & Culture':'https://unsplash.com/t/arts-culture',
-        'History':'https://unsplash.com/t/history'
-    }
+    base_url = 'https://unsplash.com/'
+    topic_utl = 'https://unsplash.com/t'
     download_url = 'https://unsplash.com/photos/{}/download?force=true'
     Log_path = 'upslash.log'
 
@@ -60,12 +41,23 @@ def log(func):
     return wrapper
 
 
-#----------------------------------------------------------------------------
+#----------------------------------------------------------------------------top
 @log
-def spider(type:str) -> str:
-    url = Config.TYPE[type]
-    r = requests.get(url,headers={'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36'})
+def spider(url:str) -> str:
+    r = requests.get(url=url,
+                     headers={
+                         'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36'
+                     })
     return r.text
+
+@log
+def get_topics() -> dict:
+    text = spider(Config.topic_utl)
+    eletree = etree.HTML(text)
+    topics = eletree.xpath('//*[@class = "_2tgoq _2WvKc"]/text()')
+    urls = eletree.xpath('//*[@class = "_2tgoq _2WvKc"]/@href')
+    urls = [urllib.parse.urljoin(Config.base_url,url) for url in urls]
+    return dict(zip(topics,urls))
 
 @log
 def parse(text:str) -> str:
@@ -89,8 +81,9 @@ def download(type:str,url:str):
 
 @log
 def main():
-    for type in Config.TYPE.keys():
-        download(type,parse(spider(type)))
+    topics = get_topics()
+    for type,url in topics.items():
+        download(type,parse(spider(url)))
 
 
 if __name__ == '__main__':
