@@ -15,17 +15,16 @@ from selenium.webdriver.chrome.options import Options
 import threading
 import datetime
 import time
+import urllib.parse
 
 class HotSearch:
     def __init__(self):
         self.url="https://s.weibo.com/top/summary?Refer=top_hot&topnav=1&wvr=6"
-        self.ranktop=""#热搜序号
-        self.name=""#热搜话题关键词
-        self.href=""#热搜话题链接
-        self.num=""#热搜话题访问数
-        self.DataDic = dict()#数据字典dataDic
-        self.now_date = str(datetime.datetime.now().date())#当前日期
-        self.base_name = []# 存储已存在文件中的热搜关键词，用作后续数据比对
+        self.DataDic = {} #数据字典dataDic
+        self.now_date = str(datetime.datetime.now().date()) #当前日期
+        self.base_name = [] # 存储已存在文件中的热搜关键词，用作后续数据比对
+        self.tplt = "{0:{4}<8}\t{1:{4}<10}\t{2:{4}<15}\t{3:{4}<20}"
+
     def spider1(self):#selenium方法
         options = Options()
         options.add_argument('--no-sandbox')#root权限
@@ -55,28 +54,24 @@ class HotSearch:
         # for i in range(len(item_list)):
         #     keyword, href = item_list[i]
         #     print(tplt.format(i+1,keyword,href,chr(12288)))
+
     def spider2(self):#requests + xpath方法
         r=requests.get(self.url,headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36'})
         r.encoding='utf-8'
         html=etree.HTML(r.text)
-        No = html.xpath('//*[@id="pl_top_realtimehot"]/table/thead/tr/th[1]')[0].text# 序号
-        keyword = html.xpath('//*[@id="pl_top_realtimehot"]/table/thead/tr/th[2]')[0].text  # 热度
-        trs =html.xpath('//*[@id="pl_top_realtimehot"]/table/tbody//tr') #热搜列表
-        tplt = "{0:{4}<8}\t{1:{4}<10}\t{2:{4}<10}\t{3:{4}<10}"
-        print()
-        print(tplt.format(No, "访问数", keyword, "链接", chr(12288)) + "\n")
+        trs = html.xpath(f'//tbody/tr')
+
+        print("\n" + self.tplt.format("序号", "访问数", "关键词", "链接", chr(12288)) + "\n")
         for tr in trs[1:]:
-            self.ranktop = tr.xpath('./td[1]')[0].text  # 排序
-            self.name = tr.xpath('./td[2]/a')[0].text  # 关键词
-            try:
-                self.href = "https://s.weibo.com" + tr.xpath('./td[2]/a/@href')[0]  # ["href_to"]
-            except:
-                self.href = tr.xpath('./td[2]/a/@href')[0]  # ["href"]
-            self.num = tr.xpath('./td[2]/span')[0].text  # 访问数
+            ranktop = tr.xpath('./td[1]')[0].text  # 排序
+            name = tr.xpath('./td[2]/a')[0].text  # 关键词
+            href = urllib.parse.urljoin("https://s.weibo.com",tr.xpath('./td[2]/a/@href | ./td[2]/a/@href_to')[0])  # ["href_to"]
+            num = ' ' if ranktop=='•' else tr.xpath('./td[2]/span')[0].text  # 访问数
             # 输出统计结果
-            print(tplt.format(self.ranktop, self.num, self.name, self.href, chr(12288)))
+            print(self.tplt.format(ranktop, num, name, href, chr(12288)))
             # 添加dataDic字典元素
-            self.DataDic[self.name] = self.href
+            self.DataDic[name] = href
+
     #储存全部热搜结果为csv文件
     def save_all_datas(self):
         with open("./datas/all_datas.csv","a",newline="",encoding='gbk')as base_data1,\
@@ -92,6 +87,7 @@ class HotSearch:
                     writer = csv.writer(base_data1)  # 创建csv写入操作对象writer
                     writer.writerow(data)
                     continue#进行下一项的比对
+
     #储存热搜前三结果为csv文件
     def save_previous_three_datas(self):
         previous_3_keys=list(self.DataDic)[:3]
@@ -108,6 +104,7 @@ class HotSearch:
                     writer = csv.writer(base_data1)  # 创建csv写入操作对象writer
                     writer.writerow(data)  # 写入数据
                     continue  #进行下一项的比对
+
     #储存热搜第一结果为csv文件
     def save_top_datas(self):
         top_key=list(self.DataDic)[0]
