@@ -41,9 +41,9 @@ def log(func):
     return wrapper
 
 
-#----------------------------------------------------------------------------top
+#----------------------------------------------------------------------------
 @log
-def spider(url:str) -> str:
+def request(url:str) -> str:
     r = requests.get(url=url,
                      headers={
                          'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36'
@@ -52,7 +52,7 @@ def spider(url:str) -> str:
 
 @log
 def get_topics() -> dict:
-    text = spider(Config.topic_utl)
+    text = request(Config.topic_utl)
     eletree = etree.HTML(text)
     topics = eletree.xpath('//*[@class = "_2tgoq _2WvKc"]/text()')
     urls = eletree.xpath('//*[@class = "_2tgoq _2WvKc"]/@href')
@@ -83,7 +83,7 @@ def download(type:str,url:str):
 def main():
     topics = get_topics()
     for type,url in topics.items():
-        download(type,parse(spider(url)))
+        download(type,parse(request(url)))
 
 
 if __name__ == '__main__':
