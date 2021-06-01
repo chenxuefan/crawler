@@ -130,11 +130,12 @@ class Flight():
                 urls += [self.baseUrl.format(code,i) for i in range(0,100000,20)]
 
         # 利用asyncio模块进行异步IO处理
-        loop = asyncio.get_event_loop()
+
         sem = asyncio.Semaphore(100)
         tasks = [asyncio.ensure_future(self.download(sem,url)) for url in urls]
-        tasks = asyncio.gather(*tasks)
-        loop.run_until_complete(tasks)
+        # tasks = asyncio.gather(*tasks)
+        loop = asyncio.get_event_loop()
+        loop.run_until_complete(asyncio.wait(tasks))
 
         self.df.to_csv(f'./tables/{self.city}.csv')
 

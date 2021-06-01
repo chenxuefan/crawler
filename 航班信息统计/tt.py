@@ -66,7 +66,7 @@ tasks = [asyncio.ensure_future(download(sem, url)) for url in urls]
 tasks = asyncio.gather(*tasks)
 loop.run_until_complete(tasks)
 
-df.to_csv('E://rong360.csv')
+df.to_csv('./rong360.csv')
 
 t4 = time.time()
 print('总共耗时：%s' % (t4 - t3))
