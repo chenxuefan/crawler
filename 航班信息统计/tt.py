@@ -22,7 +22,7 @@ df = pd.DataFrame(columns=['name', 'bank', 'currency', 'startDate',\
 async def fetch(sem, session, url):
     async with sem:
         headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36'}
-        async with session.get(url, headers=headers, verify = False) as response:
+        async with session.get(url, headers=headers, verify_ssl = False) as response:
             return await response.text()
 
 # 解析网页
