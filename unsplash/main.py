@@ -42,6 +42,8 @@ def log(func):
 
 
 #----------------------------------------------------------------------------
+
+
 @log
 def request(url:str) -> str:
     r = requests.get(url=url,
