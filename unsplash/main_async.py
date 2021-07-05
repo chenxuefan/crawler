@@ -24,7 +24,7 @@ class Config:
     base_url = 'https://unsplash.com/'
     topic_utl = 'https://unsplash.com/t'
     download_url = 'https://unsplash.com/photos/{}/download?force=true'
-    Log_path = 'upslash.log'
+    Log_path = 'unsplash.log'
 
 
 # 日志初始化
@@ -78,14 +78,15 @@ async def parse(text: str) -> str:
 async def download(type: str, url: str):
     async with aiohttp.ClientSession() as session:
         async with session.get(url, verify_ssl=False) as resp:
+            # logging.info(resp.content_disposition)
             filename = dict(resp.headers)['Content-Disposition']
             filename = re.search(r'filename="(.*?)"', filename).group(1)
             content = await resp.read()
             path = os.path.join(os.getcwd(), f'images/{type}/')
             if not os.path.exists(path):
                 os.mkdir(path)
-            with open(os.path.join(path, filename), 'wb') as f:
-                f.write(content)
+            # with open(os.path.join(path, filename), 'wb') as f:
+            #     f.write(content)
             with open(os.path.join(path, 'main.jpg'), 'wb') as f:
                 f.write(content)
                 logging.info(f'已下载 - {type}/{filename}')
@@ -104,13 +105,24 @@ async def main():
         task = asyncio.ensure_future(process(type, url))
         tasks.append(task)
 
-    return await asyncio.wait(tasks)
+    # return await asyncio.wait(tasks)
+    return tasks
 
+def run():
+    start = time.time()
+
+    # 方法1 - asyncio.run() (python3.7)
+    # done, pending = asyncio.run(main())
+
+    # 方法2 - loop.run_until_complete()
+    loop = asyncio.get_event_loop()
+    tasks = loop.run_until_complete(main())
+    done, pending = loop.run_until_complete(asyncio.wait(tasks))
+
+    end = time.time()
+    logging.info(f'共耗时 - {end - start} s')
 
 if __name__ == '__main__':
-    done, pending = asyncio.run(main())
-    pass
-    # schedule.every().day.at('00:00').do(main)
-    # while True:
-    #     schedule.run_pending()
-    #     time.sleep(1)
+    while True:
+        run()
+        time.sleep(10000)

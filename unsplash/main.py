@@ -34,7 +34,7 @@ def log(func):
     @wraps(func)
     def wrapper(*args,**kwargs):
         try:
-            logging.info(f"正在执行 - {func.__name__}")
+            # logging.info(f"正在执行 - {func.__name__}")
             return func(*args,**kwargs)
         except Exception as e:
             logging.error(repr(e)+'\n'+traceback.format_exc())
@@ -76,10 +76,11 @@ def download(type:str,url:str):
     content = r.content
     path = os.path.join(os.getcwd(),f'images/{type}/')
     if not os.path.exists(path): os.mkdir(path)
-    with open(os.path.join(path,filename),'wb') as f:
-        f.write(content)
+    # with open(os.path.join(path,filename),'wb') as f:
+    #     f.write(content)
     with open(os.path.join(path,'main.jpg'),'wb') as f:
         f.write(content)
+    logging.info(f'已下载 - {type}/{filename}')
 
 @log
 def main():
@@ -89,7 +90,10 @@ def main():
 
 
 if __name__ == '__main__':
+    start = time.time()
     main()
+    end = time.time()
+    print(f'共耗时 - {end-start}s')
     # schedule.every().day.at('00:00').do(main)
     # while True:
     #     schedule.run_pending()
