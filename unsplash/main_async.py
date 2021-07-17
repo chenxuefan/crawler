@@ -27,7 +27,6 @@ class Config:
     Log_path = 'unsplash.log'
 
 
-# 日志初始化
 logging.basicConfig(
     # filename=Config.Log_path,
     level=logging.INFO,
@@ -66,12 +65,13 @@ async def get_topics() -> dict:
 
 
 @log
-async def parse(text: str) -> str:
+async def parse(text: str):
     ids = re.findall('<a itemProp="contentUrl"(.*?)href="(.*?)">', text)
     ids = [i[-1].split('/')[-1] for i in ids]
     id = random.choice(ids)
-    url = Config.download_url.format(id)
-    return url
+    # url = Config.download_url.format(id)
+    urls = [Config.download_url.format(id) for id in ids]
+    return urls
 
 
 @log
@@ -82,18 +82,18 @@ async def download(type: str, url: str):
             filename = dict(resp.headers)['Content-Disposition']
             filename = re.search(r'filename="(.*?)"', filename).group(1)
             content = await resp.read()
-            path = os.path.join(os.getcwd(), f'images/{type}/')
+            path = os.path.join(os.getcwd(), f'./images/{type}/')
             if not os.path.exists(path):
-                os.mkdir(path)
-            # with open(os.path.join(path, filename), 'wb') as f:
-            #     f.write(content)
-            with open(os.path.join(path, 'main.jpg'), 'wb') as f:
+                os.makedirs(path)
+            with open(os.path.join(path, filename), 'wb') as f:
                 f.write(content)
-                logging.info(f'已下载 - {type}/{filename}')
+            # with open(os.path.join(path, 'main.jpg'), 'wb') as f:
+            #     f.write(content)
+            logging.info(f'已下载 - {type}/{filename}')
 
 
 async def process(type: str, url: str):
-    return await download(type, await parse(await fetch(url)))
+    return await download(type, url)
 
 
 @log
@@ -102,29 +102,32 @@ async def main():
 
     tasks = []
     for type, url in topics.items():
-        task = asyncio.ensure_future(process(type, url))
-        tasks.append(task)
-
-    # return await asyncio.wait(tasks)
-    return tasks
+        dl_url = await parse(await fetch(url))
+        if isinstance(dl_url, list):
+            task = [asyncio.create_task(process(type, url)) for url in dl_url]
+            tasks += task
+        elif isinstance(dl_url, str):
+            task = asyncio.create_task(process(type, url))
+            tasks.append(task)
+    print(tasks.__len__())
+    # await asyncio.wait(tasks)
+    # return tasks
 
 
 def run():
     start = time.time()
 
     # 方法1 - asyncio.run() (python3.7)
-    # done, pending = asyncio.run(main())
+    done, pending = asyncio.run(main())
 
     # 方法2 - loop.run_until_complete()
-    loop = asyncio.get_event_loop()
-    tasks = loop.run_until_complete(main())
-    done, pending = loop.run_until_complete(asyncio.wait(tasks))
+    # loop = asyncio.get_event_loop()
+    # tasks = loop.run_until_complete(main())
+    # done, pending = loop.run_until_complete(asyncio.wait(tasks))
 
     end = time.time()
     logging.info(f'共耗时 - {end - start} s')
 
 
 if __name__ == '__main__':
-    while True:
-        run()
-        time.sleep(10000)
+    run()
