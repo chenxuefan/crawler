@@ -108,6 +108,7 @@ async def main():
     # return await asyncio.wait(tasks)
     return tasks
 
+
 def run():
     start = time.time()
 
@@ -121,6 +122,7 @@ def run():
 
     end = time.time()
     logging.info(f'共耗时 - {end - start} s')
+
 
 if __name__ == '__main__':
     while True:
