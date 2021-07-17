@@ -109,8 +109,8 @@ async def main():
         elif isinstance(dl_url, str):
             task = asyncio.create_task(process(type, url))
             tasks.append(task)
-    print(tasks.__len__())
-    # await asyncio.wait(tasks)
+
+    await asyncio.wait(tasks)
     # return tasks
 
 
