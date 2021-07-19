@@ -65,52 +65,72 @@ async def get_topics() -> dict:
 
 
 @log
-async def parse(text: str):
+async def parse(type: str, text: str):
     ids = re.findall('<a itemProp="contentUrl"(.*?)href="(.*?)">', text)
     ids = [i[-1].split('/')[-1] for i in ids]
     id = random.choice(ids)
-    # url = Config.download_url.format(id)
+    url = [Config.download_url.format(id)]
     urls = [Config.download_url.format(id) for id in ids]
-    return urls
+    return {type : url}
 
 
 @log
 async def download(type: str, url: str):
     async with aiohttp.ClientSession() as session:
         async with session.get(url, verify_ssl=False) as resp:
-            # logging.info(resp.content_disposition)
+            content_length = resp.headers['Content-Length']
+            filesize = int(content_length) / 1024 / 1024
             filename = dict(resp.headers)['Content-Disposition']
             filename = re.search(r'filename="(.*?)"', filename).group(1)
             content = await resp.read()
             path = os.path.join(os.getcwd(), f'./images/{type}/')
+
             if not os.path.exists(path):
                 os.makedirs(path)
-            with open(os.path.join(path, filename), 'wb') as f:
-                f.write(content)
-            # with open(os.path.join(path, 'main.jpg'), 'wb') as f:
+            # with open(os.path.join(path, filename), 'wb') as f:
             #     f.write(content)
-            logging.info(f'已下载 - {type}/{filename}')
+            with open(os.path.join(path, 'main.jpg'), 'wb') as f:
+                f.write(content)
+            logging.info(f'已下载 - {type}/{filename} {filesize:.2f} MB')
 
 
-async def process(type: str, url: str):
+async def dl_process(type: str, url: str):
     return await download(type, url)
 
+async def url_process(type: str, url: str):
+    return await parse(type, await fetch(url))
 
 @log
 async def main():
     topics = await get_topics()
 
-    tasks = []
+    tasks_type = []
     for type, url in topics.items():
-        dl_url = await parse(await fetch(url))
-        if isinstance(dl_url, list):
-            task = [asyncio.create_task(process(type, url)) for url in dl_url]
-            tasks += task
-        elif isinstance(dl_url, str):
-            task = asyncio.create_task(process(type, url))
-            tasks.append(task)
+        task = asyncio.create_task(url_process(type, url))
+        tasks_type.append(task)
+    print(len(tasks_type))
+    done, pending = await asyncio.wait(tasks_type)
 
-    await asyncio.wait(tasks)
+    dl_url_dic = {}  # 待下载的图片文件资源链接
+    for task in done:
+        type, dl_url = list(task.result().items())[0]
+        dl_url_dic[type] = []
+        if isinstance(dl_url, list):
+            dl_url_dic[type] += dl_url
+        elif isinstance(dl_url, str):
+            dl_url_dic[type].append(dl_url)
+
+    tasks_dl = []
+    for type, dl_url in dl_url_dic.items():
+        if isinstance(dl_url, list):
+            task = [asyncio.create_task(dl_process(type, url)) for url in dl_url]
+            tasks_dl += task
+        elif isinstance(dl_url, str):
+            task = asyncio.create_task(dl_process(type, dl_url))
+            tasks_dl.append(task)
+
+    print(len(tasks_dl))
+    done, pending = await asyncio.wait(tasks_dl)
     # return tasks
 
 
