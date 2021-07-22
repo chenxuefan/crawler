@@ -55,12 +55,13 @@ async def fetch(url: str) -> str:
 
 
 @log
-async def get_topics() -> dict:
+async def get_topic_urls() -> dict:
     text = await fetch(Config.topic_utl)
     eletree = etree.HTML(text)
     topics = eletree.xpath('//*[@class = "_2tgoq _2WvKc"]/text()')
     urls = eletree.xpath('//*[@class = "_2tgoq _2WvKc"]/@href')
     urls = [urllib.parse.urljoin(Config.base_url, url) for url in urls]
+    logging.info(f'共 {len(topics)} 个主题')
     return dict(zip(topics, urls))
 
 
@@ -71,7 +72,7 @@ async def parse(type: str, text: str):
     id = random.choice(ids)
     url = [Config.download_url.format(id)]
     urls = [Config.download_url.format(id) for id in ids]
-    return {type : url}
+    return {type : urls}
 
 
 @log
@@ -97,21 +98,20 @@ async def download(type: str, url: str):
 async def dl_process(type: str, url: str):
     return await download(type, url)
 
-async def url_process(type: str, url: str):
+
+async def dl_url_process(type: str, url: str):
     return await parse(type, await fetch(url))
 
-@log
-async def main():
-    topics = await get_topics()
 
+async def get_dl_urls(topic_url_dic: dict) -> dict:
     tasks_type = []
-    for type, url in topics.items():
-        task = asyncio.create_task(url_process(type, url))
-        tasks_type.append(task)
-    print(len(tasks_type))
+    for type, url in topic_url_dic.items():
+        # task = asyncio.create_task(url_process(type, url))
+        tasks_type.append(dl_url_process(type, url))
+
     done, pending = await asyncio.wait(tasks_type)
 
-    dl_url_dic = {}  # 待下载的图片文件资源链接
+    dl_url_dic = {}  #
     for task in done:
         type, dl_url = list(task.result().items())[0]
         dl_url_dic[type] = []
@@ -120,30 +120,33 @@ async def main():
         elif isinstance(dl_url, str):
             dl_url_dic[type].append(dl_url)
 
-    tasks_dl = []
-    for type, dl_url in dl_url_dic.items():
-        if isinstance(dl_url, list):
-            task = [asyncio.create_task(dl_process(type, url)) for url in dl_url]
-            tasks_dl += task
-        elif isinstance(dl_url, str):
-            task = asyncio.create_task(dl_process(type, dl_url))
-            tasks_dl.append(task)
+    dl_urls = []
+    for ls in dl_url_dic.values(): dl_urls += ls
+    logging.info(f'共 {len(dl_urls)} 个图片资源')
 
-    print(len(tasks_dl))
-    done, pending = await asyncio.wait(tasks_dl)
-    # return tasks
+    return dl_url_dic
+
+
+async def dl_main(type, urls):
+    tasks_dl = [dl_process(type, url) for url in urls]
+    return await asyncio.wait(tasks_dl)
 
 
 def run():
     start = time.time()
 
-    # 方法1 - asyncio.run() (python3.7)
-    done, pending = asyncio.run(main())
+    loop = asyncio.get_event_loop()
 
-    # 方法2 - loop.run_until_complete()
-    # loop = asyncio.get_event_loop()
-    # tasks = loop.run_until_complete(main())
-    # done, pending = loop.run_until_complete(asyncio.wait(tasks))
+    topic_url_dic = loop.run_until_complete(get_topic_urls())
+
+    img_url_dic = loop.run_until_complete(get_dl_urls(topic_url_dic))
+
+    for type, urls in img_url_dic.items():
+        # 方法1 - asyncio.run() (python3.7)
+        # asyncio.run(dl_main(type, urls))
+
+        # 方法2 - loop.run_until_complete()
+        loop.run_until_complete(dl_main(type, urls))
 
     end = time.time()
     logging.info(f'共耗时 - {end - start} s')
