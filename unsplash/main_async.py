@@ -18,6 +18,8 @@ from lxml import etree
 import urllib.parse
 import asyncio
 import aiohttp
+import uvloop
+# asyncio.set_event_loop_policy(uvloop.EventLoopPolicy())
 
 
 class Config:
@@ -135,18 +137,20 @@ async def dl_main(type, urls):
 def run():
     start = time.time()
 
-    loop = asyncio.get_event_loop()
+    # loop = asyncio.get_event_loop()
 
-    topic_url_dic = loop.run_until_complete(get_topic_urls())
+    topic_url_dic = asyncio.run(get_topic_urls())
+    # topic_url_dic = loop.run_until_complete(get_topic_urls())
 
-    img_url_dic = loop.run_until_complete(get_dl_urls(topic_url_dic))
+    img_url_dic = asyncio.run(get_dl_urls(topic_url_dic))
+    # img_url_dic = loop.run_until_complete(get_dl_urls(topic_url_dic))
 
     for type, urls in img_url_dic.items():
         # 方法1 - asyncio.run() (python3.7)
-        # asyncio.run(dl_main(type, urls))
+        asyncio.run(dl_main(type, urls))
 
         # 方法2 - loop.run_until_complete()
-        loop.run_until_complete(dl_main(type, urls))
+        # loop.run_until_complete(dl_main(type, urls))
 
     end = time.time()
     logging.info(f'共耗时 - {end - start} s')
