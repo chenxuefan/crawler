@@ -16,6 +16,7 @@ from functools import wraps
 from lxml import etree
 import urllib.parse
 import threading
+import multiprocessing
 
 
 class Config:
@@ -88,20 +89,19 @@ def download(type:str,url:str):
 def main():
     topics = get_topics()
 
-    threads = []
-    for type,url in topics.items():
-        thread = threading.Thread(target=download, args=(type,parse(request(url), )))
-        thread.start()
-        threads.append(thread)
-    for thread in threads:
-        thread.join()
-
+    processes = []
+    for type, url in topics.items():
+        process = multiprocessing.Process(target=download, args=(type, parse(request(url), )))
+        process.start()
+        processes.append(process)
+    for process in processes:
+        process.join()
 
 if __name__ == '__main__':
     start = time.time()
     main()
     end = time.time()
-    print(f'共耗时 - {end-start}s')
+    print(f'共耗时 - {end-start} s')
     # schedule.every().day.at('00:00').do(main)
     # while True:
     #     schedule.run_pending()
